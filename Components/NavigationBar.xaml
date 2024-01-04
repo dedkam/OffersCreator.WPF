@@ -11,12 +11,11 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Column="0" Text="Offer$ Creator"/>
         <Button Grid.Column="1" Content="Home" Command="{Binding NavigateHomeCommand}"/>
-        <Button Grid.Column="2" Content="Login" Command="{Binding LoginHomeCommand}"/>
+        <Button Grid.Column="2" Content="Login" Command="{Binding NavigateLoginCommand}"/>
 
 
     </Grid>

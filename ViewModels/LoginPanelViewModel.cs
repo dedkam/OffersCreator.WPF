@@ -45,7 +45,7 @@ namespace OffersCreator.WPF.ViewModels
         public LoginPanelViewModel(AccountStore accountStore, NavigationStore navigationStore, NavigationBarViewModel navigationBarViewModel)
         {
             LoginCommand = new LoginCommand(this, accountStore, new NavigationService<HomeViewModel>(
-                navigationStore, () => new HomeViewModel(accountStore, navigationStore, navigationBarViewModel)));
+                navigationStore, () => new HomeViewModel( navigationBarViewModel)));
         }
 
 

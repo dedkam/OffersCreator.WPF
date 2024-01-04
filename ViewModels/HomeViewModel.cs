@@ -14,17 +14,17 @@ namespace OffersCreator.WPF.ViewModels
         private readonly AccountStore _accountStore;
         public string Username => _accountStore.CurrentAccount?.Username;
 
-        private readonly NavigationStore _navigationStore;
+        //private readonly NavigationStore _navigationStore;
         public ClientInfoViewModel ClientInfoViewModel { get; }
         public DeviceListViewModel DeviceListViewModel { get; }
         public NavigationBarViewModel NavigationBarViewModel { get; }
 
         public ICommand? GenerateOfferCreatorCommand { get; }
 
-        public HomeViewModel(AccountStore accountStore, NavigationStore navigationStore, NavigationBarViewModel navigationBarViewModel)
+        public HomeViewModel( NavigationBarViewModel navigationBarViewModel)
         {
-            _accountStore = accountStore;
-            _navigationStore = navigationStore;
+            //_accountStore = accountStore;
+            //_navigationStore = navigationStore;
             DeviceListViewModel = new DeviceListViewModel();
             ClientInfoViewModel = new ClientInfoViewModel();
             NavigationBarViewModel = navigationBarViewModel;
