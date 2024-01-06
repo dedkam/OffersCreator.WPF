@@ -21,9 +21,9 @@ namespace OffersCreator.WPF.ViewModels
 
         public ICommand? GenerateOfferCreatorCommand { get; }
 
-        public HomeViewModel( NavigationBarViewModel navigationBarViewModel)
+        public HomeViewModel( NavigationBarViewModel navigationBarViewModel, AccountStore accountStore)
         {
-            //_accountStore = accountStore;
+            _accountStore = accountStore;
             //_navigationStore = navigationStore;
             DeviceListViewModel = new DeviceListViewModel();
             ClientInfoViewModel = new ClientInfoViewModel();

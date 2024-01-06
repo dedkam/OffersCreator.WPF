@@ -21,13 +21,14 @@ namespace OffersCreator.WPF
             _accountStore = new AccountStore();
             _navigationStore = new NavigationStore();
             _navigationBarViewModel = new NavigationBarViewModel(
+                _accountStore,
                 CreateHomeNavigationService(),
                 CreateLoginNavigationService());
         }
         protected override void OnStartup(StartupEventArgs e)
         {
             
-            _navigationStore.CurrentViewModel = new LoginViewModel(_accountStore, _navigationStore, _navigationBarViewModel);
+            _navigationStore.CurrentViewModel = new HomeViewModel(_navigationBarViewModel, _accountStore);
             //NavigationService<HomeViewModel> homeNavigationService = CreateHomeNavigationService();
             //homeNavigationService.Navigate();
 
@@ -50,7 +51,7 @@ namespace OffersCreator.WPF
         private NavigationService<HomeViewModel> CreateHomeNavigationService()
         {
             return new NavigationService<HomeViewModel>(
-                _navigationStore, () => new HomeViewModel( _navigationBarViewModel));
+                _navigationStore, () => new HomeViewModel( _navigationBarViewModel, _accountStore));
         }
     }
 

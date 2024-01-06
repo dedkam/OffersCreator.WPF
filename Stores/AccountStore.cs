@@ -16,11 +16,12 @@ namespace OffersCreator.WPF.Stores
             {
                 return _currentAccount;
             }
-
             set 
             {
                 _currentAccount = value;
             } 
         }
+
+        public bool IsLoggedOut => CurrentAccount == null;
     }
 }

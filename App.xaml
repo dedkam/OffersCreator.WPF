@@ -9,7 +9,7 @@
             <Style TargetType="Button">
                 <Setter Property="Foreground" Value="white"/>
                 <Setter Property="Background" Value="#547AFF"/>
-                <Setter Property="Padding" Value="15 5"/>
+                <Setter Property="Padding" Value="15 0"/>
                 <Setter Property="Cursor" Value="Hand"/>
                 <Setter Property="VerticalAlignment" Value="center"/>
                 <Setter Property="HorizontalAlignment" Value="center"/>
